@@ -5,3 +5,4 @@ EpiCon is a computational method, proposes epigenetic controllability score to q
   ![Image](Fig1_small.png)
 </div>
 EpiCon is validated using experimental datasets including chromatin immunoprecipitation sequencing (ChIP-seq) and TF knockdown data. EpiCon distinguished TFs even when they belong to the same family and share identical motifs. EpiCon discovers experimentally validated driver regulators. Our approach is broadly applicable to any sc-multiome data.
+## Install the packages
