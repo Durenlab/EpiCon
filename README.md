@@ -8,7 +8,9 @@ EpiCon is validated using experimental datasets including chromatin immunoprecip
 
 ## Requirements
 bedtools (conda install -c bioconda bedtools)
+
 homer (conda install -c bioconda homer)
+
 python packages: numpy, pandas, scipy, scikit-learn, scanpy, subprocess
 ## Install the packages
 ```sh
