@@ -7,6 +7,7 @@ EpiCon is a computational method, proposing an epigenetic controllability score 
 EpiCon is validated using experimental datasets including chromatin immunoprecipitation sequencing (ChIP-seq) and TF knockdown data. EpiCon distinguished TFs even when they belong to the same family and share identical motifs. EpiCon discovers experimentally validated driver regulators. Our approach is broadly applicable to any sc-multiome data.
 
 ## Requirements
+numpy, pandas
 ## Install the packages
 ```sh
 git clone https://github.com/Durenlab/EpiCon.git
@@ -18,3 +19,19 @@ cd $Input_dir
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1GJkUCGEcjYNacPQvADeYl3uO63_9OA33' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1GJkUCGEcjYNacPQvADeYl3uO63_9OA33" -O provide_data.tar.gz && rm -rf /tmp/cookies.txt
 tar -xzvf provide_data.tar.gz
 ```
+## Run EpiCon 
+Now we can run EpiCon in python
+```python
+from EpiCon import *
+Input_dir='/data2/duren_lab/Kaya/CECI/H1/'
+RNA_file='RNA.txt'
+ATAC_file='ATAC.txt'
+label_file='label.txt'
+provide_dir='/data2/duren_lab/Kaya/CECI/H1/method/provide_data/'
+code_dir='/data2/duren_lab/Kaya/CECI/code/'
+genome='hg38'
+outdir='/data2/duren_lab/Kaya/CECI/code/output'
+N=200000
+EpiCon(Input_dir,RNA_file,ATAC_file,label_file,provide_dir,code_dir,genome,outdir,N)
+```
+
