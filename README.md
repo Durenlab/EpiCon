@@ -6,6 +6,15 @@ EpiCon is a computational method, proposing an epigenetic controllability score 
 </div>
 EpiCon is validated using experimental datasets including chromatin immunoprecipitation sequencing (ChIP-seq) and TF knockdown data. EpiCon distinguished TFs even when they belong to the same family and share identical motifs. EpiCon discovers experimentally validated driver regulators. Our approach is broadly applicable to any sc-multiome data.
 
+## Requirements
 ## Install the packages
+```sh
 git clone https://github.com/Durenlab/EpiCon.git
+```
 ## Download the provided data
+```sh
+Input_dir=/path/to/dir/
+cd $Input_dir
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1GJkUCGEcjYNacPQvADeYl3uO63_9OA33' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1GJkUCGEcjYNacPQvADeYl3uO63_9OA33" -O provide_data.tar.gz && rm -rf /tmp/cookies.txt
+tar -xzvf provide_data.tar.gz
+```
